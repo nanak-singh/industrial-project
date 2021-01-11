@@ -161,7 +161,7 @@ def main():
         if a == "\n" or a == " ": 
             st.markdown("Password cannot be a newline or space!")
 
-        if 9 <= len(a) <= 20: 
+        elif 9 <= len(a) <= 20: 
    
             # checks for occurrence of a character  
             # three or more times in a row 
@@ -171,7 +171,7 @@ def main():
             # checks for occurrence of same string  
             # pattern( minimum of two character length) 
             # repeating 
-            if re.search(r'(..)(.*?)\1', a): 
+            elif re.search(r'(..)(.*?)\1', a): 
                 st.error("Weak password: Same string pattern repetition")
     
             else: 
